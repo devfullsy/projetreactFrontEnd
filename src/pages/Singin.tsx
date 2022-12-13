@@ -1,25 +1,52 @@
 import { useForm } from 'react-hook-form';
 import bgImg from '../assets/kingk.jpg';
+import { Link } from "react-router-dom";
+import Axios from 'axios';
 
 const Singin = () =>{
 
+
   const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = (data: any) => console.log(data);
+    const onSubmit = (data: any) => {
+      Axios.post('http://localhost:3001/users/',{
+        nom:data.nom,
+        prenom:data.prenom,
+        email:data.email,
+        password:data.password,
+        niveau:data.niveau,
+        poid:data.poid,
+        commentaire:''
+      })
+    .then((res=>{
+      
+    })) ;
+    };
+    
+    
     return (
       <section>
           <div className="register">
               <div className="col-1">
-                  <h2>Sign In</h2>
-                  <span>register and enjoy the service</span>
+                  <h2>CREER UN COMPTE</h2>
+                  <span>tous les champs sont oubligatoires </span>
   
                   <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
-                      <input type="text" {...register("username")} placeholder='username' />
-                      <input type="text" {...register("password")} placeholder='password' />
-                      <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
-                      <input type="text" {...register("mobile", { required : true, maxLength: 10 })} placeholder='mobile number' />
-                      {errors.mobile?.type === "required" && "Mobile Number is required"}
-                      {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
-                      <br /><button className='btn'>Sign In</button>
+                    <input type="text"        {...register("nom",{ required : true })} placeholder='nom     *' /> 
+                    {errors.nom?.type === "required" && "le nom est obligatoire "}                 
+                    <input type="text"        {...register("prenom", { required : true })} placeholder='prenom  *' />
+                    {errors.prenom?.type === "required" && "le prenom est obligatoire "}
+                    <input type="email"       {...register("email", { required : true })} placeholder='email   *' />
+                    {errors.email?.type === "required" && "l'email est obligatoire "}
+                    <input type="password"    {...register("password",{ required : true })} placeholder='mot de passe *' />
+                    {errors.password?.type === "required" && "le mot de passe est obligatoire "}
+                    <input type="text"        {...register("niveau", { required : true })} placeholder='niveau (débutant ou avancé) *' />
+                    {errors.niveau?.type === "required" && "le niveau est obligatoire "}
+                    <input type="number"      {...register("poid", { required : true })} placeholder='poid    *' /> 
+                    {errors.poid?.type === "required" && "le poid est obligatoire "}
+                    <Link  to={"/login"}>
+                      <button style={{ backgroundColor: '#003049' , color: 'white'}} className='btn'>Creer un compte</button>
+                    </Link>
+                    <Link style={{ color: "grey " }} to={"/login"}>Se connecter</Link>
                   </form>
   
               </div>

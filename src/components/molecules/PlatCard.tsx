@@ -4,17 +4,16 @@ interface PlatCardProps {
   name: string;
   price: string;
   imgUrl: string;
-  maFonctionClick: () => void;
 }
 
-const PlatCard = ({ name, price, imgUrl, maFonctionClick }: PlatCardProps) => {
+const PlatCard = ({ name, price, imgUrl}: PlatCardProps) => {
   return (
     <Container>
       <img src={imgUrl} alt={name} />
       <div>
         <p>{name}</p>
         <div>
-          <button onClick={maFonctionClick}>+</button>
+          <button>+</button>
           <span>{price} €</span>
         </div>
       </div>

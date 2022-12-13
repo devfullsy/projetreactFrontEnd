@@ -1,21 +1,13 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useGlobalContext } from "../../contexts/GlobalContext";
 
 const Header = () => {
-  const { count } = useGlobalContext();
   return (
     <Container style={{ background:"#003049"}}>
       <nav>
-        <ul>  
+        <ul> 
           <li>
-            <Link style={{ color: "white " }} to={"/singin"}>CREER UN COMPTE</Link>
-          </li>
-          <li>
-            <Link style={{ color: "white " }} to={"/"}>PROGRAMME</Link>
-          </li>
-          <li>
-            <Link style={{ color: "white " }} to={"/panier"}>Panier</Link>
+            <Link style={{ color: "white " }} to={"/"}>HOME</Link>
           </li>
         </ul>
       </nav>
@@ -27,7 +19,6 @@ export default Header;
 
 const Container = styled.header`
   border-bottom: 1px solid black;
-  text-align: center;
   transition: all 0.2s ease;
 
   & ul {

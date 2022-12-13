@@ -32,17 +32,17 @@ interface MenuPageProps {
   incrementCount: () => void;
 }
 
-const MenuPage = ({ incrementCount }: MenuPageProps) => {
+const Program = () => {
   return (
     <PlatsContainer>
       {plats.map((item) => (
-        <PlatCard maFonctionClick={incrementCount} key={item.name} {...item} />
+        <PlatCard key={item.name} {...item} />
       ))}
     </PlatsContainer>
   );
 };
 
-export default MenuPage;
+export default Program;
 
 const PlatsContainer = styled.div`
   display: flex;
