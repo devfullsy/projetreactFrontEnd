@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 const Acceuil = () => {
     return (
       <section>
+        <h1>condition générales</h1>
         <div>
-            <p>
+            <p style={{color: "black"}} >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <br /> 
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <br />
@@ -12,6 +13,10 @@ const Acceuil = () => {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
             </p>
       </div>
+      <div>
+      <label>J'accepte les conditions</label>
+        <input type="checkbox" id="" name="" />
+    </div>
       <div>
       <Link style={{ color: "grey " }} to={"/Singin"}>Creer un compte</Link>
       </div>

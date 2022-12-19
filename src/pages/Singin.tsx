@@ -7,8 +7,8 @@ const Singin = () =>{
 
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = (data: any) => {
-      Axios.post('http://localhost:3001/users/',{
+    const onSubmit = async (data: any) => {
+      await Axios.post('http://localhost:3001/users/',{
         nom:data.nom,
         prenom:data.prenom,
         email:data.email,
@@ -16,11 +16,8 @@ const Singin = () =>{
         niveau:data.niveau,
         poid:data.poid,
         commentaire:''
-      })
-    .then((res=>{
-      
-    })) ;
-    };
+      });
+      };
     
     
     return (
@@ -39,14 +36,11 @@ const Singin = () =>{
                     {errors.email?.type === "required" && "l'email est obligatoire "}
                     <input type="password"    {...register("password",{ required : true })} placeholder='mot de passe *' />
                     {errors.password?.type === "required" && "le mot de passe est obligatoire "}
-                    <input type="text"        {...register("niveau", { required : true })} placeholder='niveau (débutant ou avancé) *' />
+                    <input type="text"    {...register("niveau",{ required : true })} placeholder='niveau (débutant ou avancé) *' />
                     {errors.niveau?.type === "required" && "le niveau est obligatoire "}
                     <input type="number"      {...register("poid", { required : true })} placeholder='poid    *' /> 
                     {errors.poid?.type === "required" && "le poid est obligatoire "}
-                    <Link  to={"/login"}>
-                      <button style={{ backgroundColor: '#003049' , color: 'white'}} className='btn'>Creer un compte</button>
-                    </Link>
-                    <Link style={{ color: "grey " }} to={"/login"}>Se connecter</Link>
+                      <button style={{ backgroundColor: '#003049' , color: 'white'}}  className ='btn'>Creer un compte</button>
                   </form>
   
               </div>

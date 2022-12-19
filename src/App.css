@@ -6,11 +6,18 @@
 }
 
 body{
-  background: #0f0c29;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #2038364a;
+  background: -webkit-linear-gradient(to right, #53491760, #47430e58, #494b1332); 
+  background: linear-gradient(to right, #43361338, #5d245400, #48181826); 
   
 }
+table{
+  border: 50px;
+}		
+tbody:nth-child(odd)  { background-color : #CED4E5; }
+tbody:nth-child(even) { background-color : #E8EBF5; }
+th { background-color : #557CBA; padding:0.7em; }
+td { padding:0.5em; }
 
 
 .register{
@@ -25,7 +32,9 @@ body{
   /* box-shadow: 1px 3px 10px #e9ecef; */
   background-color: white;
 }
-
+#btnid{
+  border: none;
+}
 .register span{
   color: #adb5bd;
 }
@@ -36,7 +45,7 @@ body{
   margin: 2em auto;
 }
 
-#form >  input, .btn{
+#form >  input, .btn, select{
   border: 1px solid #e9ecef;
   padding: .9em 1em;
 }
@@ -50,6 +59,7 @@ body{
   color: #e9ecef;
   font-size: 1em;
   cursor: pointer;
+  position: center;
 }
 
 .flex{
