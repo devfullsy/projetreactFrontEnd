@@ -1,0 +1,8 @@
+branche du projet
+https://github.com/devfullsy/projetreactFrontEnd.git
+pour qur le projet fonction:
+il le cloner depuis le lien ci-dessus.
+aller dans le dossier du projet
+ouvrir un terminal sur vscode lancer la commande npm install
+pour que tout fonction bien il faut lancer d'abord l'application back
+lancer la commande npm run start et voila l'application tourne sur le port 3000
