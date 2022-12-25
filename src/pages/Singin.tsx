@@ -1,11 +1,11 @@
 import { useForm } from 'react-hook-form';
 import bgImg from '../assets/kingk.jpg';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Axios from 'axios';
 
 const Singin = () =>{
 
-
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = async (data: any) => {
       await Axios.post('http://localhost:3001/users/',{
@@ -16,6 +16,8 @@ const Singin = () =>{
         niveau:data.niveau,
         poid:data.poid,
         commentaire:''
+      }).then(resp => {  
+        navigate("/singin");    
       });
       };
     

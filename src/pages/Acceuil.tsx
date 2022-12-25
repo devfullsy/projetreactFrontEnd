@@ -1,29 +1,34 @@
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+
 
 const Acceuil = () => {
     return (
-      <section>
-        <h1>condition générales</h1>
-        <div>
+      <Section>
+        <h1>PRESENTATION DU SITE</h1>
+        <main>
             <p style={{color: "black"}} >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <br /> 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <br />
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br />
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              bienvenue sur votre site de conseil de musculartion. <br />
+               Sur ce site vos aurai toutes les informations qui vous permettrons de bien <br />
+              apprehender le monde de la musculation.
+              vous aurez des programmes de sport et un programme alimentaire <br />
+               pour chaque niveau, que vous soyez debutant ou avancé.
+
             </p>
-      </div>
-      <div>
-      <label>J'accepte les conditions</label>
+        </main>
+        <div>
+        <label>J'accepte les conditions</label>
         <input type="checkbox" id="" name="" />
-    </div>
-      <div>
-      <Link style={{ color: "grey " }} to={"/Singin"}>Creer un compte</Link>
-      </div>
-      </section>  
+        </div>
+      </Section>  
       
     );
   };
   
   export default Acceuil;
   
+  const Section = styled.main`
+  border-bottom: 1px black;
+  transition: all 0.2s ease;
+
+ 
+`;

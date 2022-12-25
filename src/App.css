@@ -12,7 +12,7 @@ body{
   
 }
 table{
-  border: 50px;
+  margin-top: 5%;
 }		
 tbody:nth-child(odd)  { background-color : #CED4E5; }
 tbody:nth-child(even) { background-color : #E8EBF5; }
@@ -34,6 +34,8 @@ td { padding:0.5em; }
 }
 #btnid{
   border: none;
+  margin-top: 5%;
+  margin-left: 45%;
 }
 .register span{
   color: #adb5bd;

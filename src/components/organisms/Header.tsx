@@ -9,6 +9,9 @@ const Header = () => {
             <Link style={{ color: "white " }} to={"/"}>HOME</Link>
           </li>
           <li>
+            <Link style={{ color: "white "  }} to={"/Singin"}>CREER UN COMPTE</Link>
+          </li>
+          <li>
             <Link style={{ color: "white " }} to={"/login"}> SE CONNECTER </Link>
           </li>
         </ul>

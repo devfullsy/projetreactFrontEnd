@@ -1,12 +1,20 @@
-import { useForm } from 'react-hook-form';
+import { useForm} from 'react-hook-form';
 import Axios from 'axios';
-let texte:string ="";
+import { useNavigate } from "react-router-dom";
+
+
 const Login = () =>{
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data: any) =>{
     const mail=data.email;
     const pwd=data.password;
-    Axios.get(`http://localhost:3001/users/${mail}/${pwd}`);
+    Axios.get(`http://localhost:3001/users/${mail}/${pwd}`)
+    .then(resp => {
+        
+      navigate("/program");    
+    });
+
   };
   return (
     <section>
