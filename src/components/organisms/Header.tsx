@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 const Header = () => {
   return (
-    <Container style={{ background:"#003049"}}>
+    <Container style={{ background: "#003049" }}>
       <nav>
         <ul>
           <li>
             <Link style={{ color: "white " }} to={"/"}>HOME</Link>
           </li>
           <li>
-            <Link style={{ color: "white "  }} to={"/Singin"}>CREER UN COMPTE</Link>
+            <Link style={{ color: "white " }} to={"/Singin"}>CREER UN COMPTE</Link>
           </li>
           <li>
             <Link style={{ color: "white " }} to={"/login"}> SE CONNECTER </Link>

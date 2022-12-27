@@ -5,10 +5,10 @@ import Header from "./components/organisms/Header";
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <Header />
-        <Content />
-      </BrowserRouter>
+    <BrowserRouter>
+      <Header />
+      <Content />
+    </BrowserRouter>
   );
 };
 

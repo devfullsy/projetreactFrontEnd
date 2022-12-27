@@ -1,62 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* > * {
-    font-family: "Poppins", cursive;
-    margin: 0;
+*>* {
+  font-family: "Poppins", cursive;
+  margin: 0;
 }
 
-body{
+body {
   background: #2038364a;
-  background: -webkit-linear-gradient(to right, #53491760, #47430e58, #494b1332); 
-  background: linear-gradient(to right, #43361338, #5d245400, #48181826); 
-  
+  background: -webkit-linear-gradient(to right, #53491760, #47430e58, #494b1332);
+  background: linear-gradient(to right, #43361338, #5d245400, #48181826);
+
 }
-table{
+
+table {
   margin-top: 5%;
-}		
-tbody:nth-child(odd)  { background-color : #CED4E5; }
-tbody:nth-child(even) { background-color : #E8EBF5; }
-th { background-color : #557CBA; padding:0.7em; }
-td { padding:0.5em; }
+}
+
+tbody:nth-child(odd) {
+  background-color: #CED4E5;
+}
+
+tbody:nth-child(even) {
+  background-color: #E8EBF5;
+}
+
+th {
+  background-color: #557CBA;
+  padding: 0.7em;
+}
+
+td {
+  padding: 0.5em;
+}
 
 
-.register{
+.register {
   margin: 50px;
   margin-left: auto;
   margin-right: auto;
   max-width: 978px;
   width: 100vw;
-  display:flex;
+  display: flex;
   border: 1px solid #e9ecef;
   border-radius: 5px;
   /* box-shadow: 1px 3px 10px #e9ecef; */
   background-color: white;
 }
-#btnid{
+
+#btnid {
   border: none;
   margin-top: 5%;
   margin-left: 45%;
 }
-.register span{
+
+.register span {
   color: #adb5bd;
 }
 
-#form{
+#form {
   max-width: 320px;
   width: 100vw;
   margin: 2em auto;
 }
 
-#form >  input, .btn, select{
+#form>input,
+.btn,
+select {
   border: 1px solid #e9ecef;
   padding: .9em 1em;
 }
 
-#form > input:focus{
+#form>input:focus {
   outline: none;
 }
 
-#form > .btn{
+#form>.btn {
   background-color: #003049;
   color: #e9ecef;
   font-size: 1em;
@@ -64,21 +82,21 @@ td { padding:0.5em; }
   position: center;
 }
 
-.flex{
+.flex {
   display: flex;
   gap: 1em;
 }
 
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
 
-.register .col-1{
+.register .col-1 {
   margin: auto;
   padding: 3em 0;
 }
 
-.register .col-2 img{
+.register .col-2 img {
   width: 480px;
   height: 100%;
   object-fit: cover;
@@ -88,8 +106,8 @@ td { padding:0.5em; }
   display: none;
 }
 
-@media screen and (min-width: 860px)  {
-  .register .col-2 img{
+@media screen and (min-width: 860px) {
+  .register .col-2 img {
     display: initial;
   }
 }

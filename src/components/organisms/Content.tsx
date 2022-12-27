@@ -11,8 +11,8 @@ const Content = () => {
       <Route path="login" element={<Login />} />
       <Route path="singin" element={<Singin />} />
       <Route path="program" element={<Program />} />
-      <Route path="commentaire" element={<Commentaire/>} />
-      <Route path="" element={<Acceuil/>} />
+      <Route path="commentaire" element={<Commentaire />} />
+      <Route path="" element={<Acceuil />} />
     </Routes>
   );
 };
